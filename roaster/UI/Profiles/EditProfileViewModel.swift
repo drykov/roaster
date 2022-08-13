@@ -19,7 +19,9 @@ class EditProfileViewModel: ObservableObject {
     let create: Bool
     
     @Published var name: String
-
+    @Published var startTemperature: Int
+    @Published var roastTime: Int
+    @Published var startWeight: Int
     @Published var finish: Bool = false
 
     init(profile: Profile?, profilesService: ProfilesService = ProfilesServiceImpl.shared) {
@@ -27,10 +29,13 @@ class EditProfileViewModel: ObservableObject {
         self.profile = profile
         create = profile == nil
         name = profile?.name ?? ""
+        startTemperature = profile?.startTemperature ?? 0
+        roastTime = profile?.roastTime ?? 0
+        startWeight = profile?.startWeight ?? 0
     }
     
     func saveProfile() {
-        let profile = Profile(id: profile?.id, created: profile?.created, name: name, startTemperature: 0, roastTime: 0, weight: 0)
+        let profile = Profile(id: profile?.id, created: profile?.created, name: name, startTemperature: startTemperature, roastTime: roastTime, startWeight: startWeight)
         let publisher = create ? profilesService.createProfile(profile) : profilesService.updateProfile(profile)
         publisher
             .sink(receiveCompletion: { completion in

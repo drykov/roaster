@@ -13,5 +13,5 @@ struct Profile: Identifiable {
     let name: String
     let startTemperature: Int
     let roastTime: Int
-    let weight: Int
+    let startWeight: Int
 }

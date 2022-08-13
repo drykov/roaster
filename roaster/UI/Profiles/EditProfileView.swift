@@ -18,6 +18,15 @@ struct EditProfileView: View {
             Section("Name") {
                 TextField("Name", text: $viewModel.name)
             }
+            Section("Start temperature, °C") {
+                TextField("Temperature", value: $viewModel.startTemperature, formatter: NumberFormatter())
+            }
+            Section("Roast time, s") {
+                TextField("Time", value: $viewModel.roastTime, formatter: NumberFormatter())
+            }
+            Section("Start weight, g") {
+                TextField("Weight", value: $viewModel.startWeight, formatter: NumberFormatter())
+            }
             Button {
                 viewModel.saveProfile()
             } label: {

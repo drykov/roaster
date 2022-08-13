@@ -28,7 +28,7 @@ class ProfilesServiceImpl: ProfilesService {
                 let items = try self.coreDataService.context.fetch(request)
                 promise(.success(items.map { item in
                     Profile(id: item.id, created: item.created, name: item.name ?? "",
-                            startTemperature: Int(item.startTemperature), roastTime: Int(item.roastTime), weight: Int(item.weight))
+                            startTemperature: Int(item.startTemperature), roastTime: Int(item.roastTime), startWeight: Int(item.startWeight))
                 }))
             } catch {
                 promise(.failure(error))
@@ -46,7 +46,7 @@ class ProfilesServiceImpl: ProfilesService {
                 item.name = profile.name
                 item.startTemperature = Int16(profile.startTemperature)
                 item.roastTime = Int16(profile.roastTime)
-                item.weight = Int16(profile.weight)
+                item.startWeight = Int16(profile.startWeight)
                 try self.coreDataService.context.save()
                 promise(.success(()))
             } catch {
@@ -67,7 +67,7 @@ class ProfilesServiceImpl: ProfilesService {
                         item.name = profile.name
                         item.startTemperature = Int16(profile.startTemperature)
                         item.roastTime = Int16(profile.roastTime)
-                        item.weight = Int16(profile.weight)
+                        item.startWeight = Int16(profile.startWeight)
                         try self.coreDataService.context.save()
                         promise(.success(()))
                     }

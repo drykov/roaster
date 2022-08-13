@@ -29,6 +29,6 @@ struct ProfileCellView: View {
 struct ProfileCellView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ProfileCellView(profile: Profile(id: nil, created: Date(), name: "Test", startTemperature: 0, roastTime: 0, weight: 0))
+        ProfileCellView(profile: Profile(id: nil, created: Date(), name: "Test", startTemperature: 0, roastTime: 0, startWeight: 0))
     }
 }

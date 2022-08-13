@@ -10,7 +10,22 @@ import SwiftUI
 struct SettingsView: View {
     
     var body: some View {
-        Text("Settings")
+        NavigationView {
+            Form {
+                NavigationLink(destination: ProfilesView()) {
+                    Text("Profiles")
+                }
+                Section {
+                    NavigationLink(destination: EmptyView()) {
+                        Text("Weight loss calculator")
+                    }
+                    NavigationLink(destination: EmptyView()) {
+                        Text("Extraction calculator")
+                    }
+                }
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
 

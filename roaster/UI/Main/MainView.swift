@@ -10,13 +10,8 @@ import SwiftUI
 struct MainView: View {
     
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: ProfilesView()) {
-                    Text("Profiles")
-                }
-            }
-        }
+        Text("What would like to\nroast today?")
+            .font(.largeTitle)
     }
 }
 
