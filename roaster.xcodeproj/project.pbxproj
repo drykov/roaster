@@ -26,6 +26,11 @@
 		32B63F5928A7D98100811E02 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F5828A7D98100811E02 /* Temp.swift */; };
 		32B63F5B28A7DF7B00811E02 /* RoastsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F5A28A7DF7B00811E02 /* RoastsService.swift */; };
 		32B63F5D28A7DFD000811E02 /* RoastsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F5C28A7DFD000811E02 /* RoastsServiceImpl.swift */; };
+		32B63F5F28A821EC00811E02 /* RoastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F5E28A821EC00811E02 /* RoastCellView.swift */; };
+		32B63F6128A8222D00811E02 /* RoastsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6028A8222D00811E02 /* RoastsViewModel.swift */; };
+		32B63F6328A8225300811E02 /* CreateRoastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6228A8225300811E02 /* CreateRoastView.swift */; };
+		32B63F6528A8226C00811E02 /* RoastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6428A8226C00811E02 /* RoastView.swift */; };
+		32B63F6728A8228C00811E02 /* CreateRoastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */; };
 		32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC328A3E8D000A12933 /* roasterApp.swift */; };
 		32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC528A3E8D000A12933 /* ContentView.swift */; };
 		32CA3DC828A3E8D000A12933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA3DC728A3E8D000A12933 /* Assets.xcassets */; };
@@ -52,6 +57,11 @@
 		32B63F5828A7D98100811E02 /* Temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		32B63F5A28A7DF7B00811E02 /* RoastsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoastsService.swift; sourceTree = "<group>"; };
 		32B63F5C28A7DFD000811E02 /* RoastsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoastsServiceImpl.swift; sourceTree = "<group>"; };
+		32B63F5E28A821EC00811E02 /* RoastCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastCellView.swift; sourceTree = "<group>"; };
+		32B63F6028A8222D00811E02 /* RoastsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastsViewModel.swift; sourceTree = "<group>"; };
+		32B63F6228A8225300811E02 /* CreateRoastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoastView.swift; sourceTree = "<group>"; };
+		32B63F6428A8226C00811E02 /* RoastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastView.swift; sourceTree = "<group>"; };
+		32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoastViewModel.swift; sourceTree = "<group>"; };
 		32CA3DC028A3E8D000A12933 /* Roaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA3DC328A3E8D000A12933 /* roasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roasterApp.swift; sourceTree = "<group>"; };
 		32CA3DC528A3E8D000A12933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,7 +131,12 @@
 		32B63F3328A3EDF800811E02 /* Roasts */ = {
 			isa = PBXGroup;
 			children = (
+				32B63F6228A8225300811E02 /* CreateRoastView.swift */,
+				32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */,
+				32B63F5E28A821EC00811E02 /* RoastCellView.swift */,
+				32B63F6428A8226C00811E02 /* RoastView.swift */,
 				32B63F3628A3EE3400811E02 /* RoastsView.swift */,
+				32B63F6028A8222D00811E02 /* RoastsViewModel.swift */,
 			);
 			path = Roasts;
 			sourceTree = "<group>";
@@ -276,10 +291,15 @@
 				32B63F5D28A7DFD000811E02 /* RoastsServiceImpl.swift in Sources */,
 				32B63F5528A7105300811E02 /* Date.swift in Sources */,
 				32B63F4528A5373300811E02 /* CoreDataService.swift in Sources */,
+				32B63F5F28A821EC00811E02 /* RoastCellView.swift in Sources */,
 				32B63F3728A3EE3400811E02 /* RoastsView.swift in Sources */,
+				32B63F6128A8222D00811E02 /* RoastsViewModel.swift in Sources */,
 				32B63F4A28A5394500811E02 /* CoreDataServiceImpl.swift in Sources */,
+				32B63F6528A8226C00811E02 /* RoastView.swift in Sources */,
 				32B63F4128A533D300811E02 /* ProfilesService.swift in Sources */,
+				32B63F6728A8228C00811E02 /* CreateRoastViewModel.swift in Sources */,
 				32B63F3C28A531E200811E02 /* ProfilesView.swift in Sources */,
+				32B63F6328A8225300811E02 /* CreateRoastView.swift in Sources */,
 				32B63F4C28A5949000811E02 /* ProfilesViewModel.swift in Sources */,
 				32B63F5228A70F9E00811E02 /* ProfileCellView.swift in Sources */,
 				32B63F5028A59BA200811E02 /* EditProfileViewModel.swift in Sources */,

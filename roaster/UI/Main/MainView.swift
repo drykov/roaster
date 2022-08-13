@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     var body: some View {
-        Text("What would like to\nroast today?")
+        Text("What would you like to\nroast today?")
             .font(.largeTitle)
     }
 }

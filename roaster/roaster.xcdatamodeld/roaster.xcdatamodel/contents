@@ -19,8 +19,8 @@
         <attribute name="secondCrackTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="startTemperature" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="startWeight" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="temps_temp" attributeType="Transformable" valueTransformerName="Transformer" customClassName="[Int16]"/>
-        <attribute name="temps_time" attributeType="Transformable" valueTransformerName="Transformer" customClassName="[Int16]"/>
+        <attribute name="temps_temp" attributeType="Transformable" valueTransformerName="" customClassName="[Int16]"/>
+        <attribute name="temps_time" attributeType="Transformable" valueTransformerName="" customClassName="[Int16]"/>
     </entity>
     <elements>
         <element name="CoreProfile" positionX="-63" positionY="-18" width="128" height="119"/>

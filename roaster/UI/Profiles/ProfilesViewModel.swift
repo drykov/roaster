@@ -39,7 +39,7 @@ class ProfilesViewModel: ObservableObject {
                 if case let .failure(error) = completion {
                     print("Can't delete profile \(error)")
                 }
-            }, receiveValue: { [weak self] profiles in
+            }, receiveValue: { [weak self] in
                 self?.getProfiles()
             })
             .store(in: &cancellables)

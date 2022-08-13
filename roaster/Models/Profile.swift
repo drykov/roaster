@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile: Identifiable {
+struct Profile: Identifiable, Hashable {
     
     let id: String?
     let created: Date?
