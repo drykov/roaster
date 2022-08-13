@@ -43,16 +43,20 @@ class ProfilesServiceImpl: ProfilesService {
                 let item = CoreProfile(context: self.coreDataService.context)
                 item.id = UUID().uuidString
                 item.created = Date()
-                item.name = profile.name
-                item.startTemperature = Int16(profile.startTemperature)
-                item.roastTime = Int16(profile.roastTime)
-                item.startWeight = Int16(profile.startWeight)
+                self.setItem(item, profile)
                 try self.coreDataService.context.save()
                 promise(.success(()))
             } catch {
                 promise(.failure(error))
             }
         }.eraseToAnyPublisher()
+    }
+    
+    private func setItem(_ item: CoreProfile, _ profile: Profile) {
+        item.name = profile.name
+        item.startTemperature = Int16(profile.startTemperature)
+        item.roastTime = Int16(profile.roastTime)
+        item.startWeight = Int16(profile.startWeight)
     }
 
     func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
@@ -64,10 +68,7 @@ class ProfilesServiceImpl: ProfilesService {
                     request.predicate = NSPredicate(format: "id=%@", id)
                     let item = try self.coreDataService.context.fetch(request).first
                     if let item = item {
-                        item.name = profile.name
-                        item.startTemperature = Int16(profile.startTemperature)
-                        item.roastTime = Int16(profile.roastTime)
-                        item.startWeight = Int16(profile.startWeight)
+                        self.setItem(item, profile)
                         try self.coreDataService.context.save()
                         promise(.success(()))
                     }

@@ -8,8 +8,10 @@
 import Foundation
 
 struct Profile: Identifiable {
+    
     let id: String?
     let created: Date?
+    
     let name: String
     let startTemperature: Int
     let roastTime: Int
