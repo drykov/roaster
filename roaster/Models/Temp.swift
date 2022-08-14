@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Temp {
+struct Temp: Hashable {
     
     let time: Int
     let temp: Int

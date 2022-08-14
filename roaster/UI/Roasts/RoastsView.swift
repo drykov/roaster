@@ -11,6 +11,8 @@ struct RoastsView: View {
     
     @StateObject private var viewModel = RoastsViewModel()
     
+    @State var reload = false
+    
     var body: some View {
         NavigationView {
             List(viewModel.roasts) { roast in
@@ -26,8 +28,11 @@ struct RoastsView: View {
             .refreshable {
                 viewModel.getRoasts()
             }
+            .onChange(of: reload) { _ in
+                viewModel.getRoasts()
+            }
             .toolbar {
-                NavigationLink(destination: { CreateRoastView() }) {
+                NavigationLink(destination: { CreateRoastView(reload: $reload) }) {
                     Image(systemName: "plus")
                 }
             }

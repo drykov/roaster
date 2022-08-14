@@ -31,6 +31,10 @@
 		32B63F6328A8225300811E02 /* CreateRoastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6228A8225300811E02 /* CreateRoastView.swift */; };
 		32B63F6528A8226C00811E02 /* RoastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6428A8226C00811E02 /* RoastView.swift */; };
 		32B63F6728A8228C00811E02 /* CreateRoastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */; };
+		32B63F6B28A96D7200811E02 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6A28A96D7200811E02 /* TempView.swift */; };
+		32B63F6D28A96D8100811E02 /* TempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6C28A96D8100811E02 /* TempViewModel.swift */; };
+		32B63F6F28A9833800811E02 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6E28A9833800811E02 /* Int.swift */; };
+		32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */; };
 		32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC328A3E8D000A12933 /* roasterApp.swift */; };
 		32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC528A3E8D000A12933 /* ContentView.swift */; };
 		32CA3DC828A3E8D000A12933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA3DC728A3E8D000A12933 /* Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		32B63F6228A8225300811E02 /* CreateRoastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoastView.swift; sourceTree = "<group>"; };
 		32B63F6428A8226C00811E02 /* RoastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastView.swift; sourceTree = "<group>"; };
 		32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoastViewModel.swift; sourceTree = "<group>"; };
+		32B63F6A28A96D7200811E02 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		32B63F6C28A96D8100811E02 /* TempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewModel.swift; sourceTree = "<group>"; };
+		32B63F6E28A9833800811E02 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntDoubleBinding.swift; sourceTree = "<group>"; };
 		32CA3DC028A3E8D000A12933 /* Roaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA3DC328A3E8D000A12933 /* roasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roasterApp.swift; sourceTree = "<group>"; };
 		32CA3DC528A3E8D000A12933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 				32B63F6428A8226C00811E02 /* RoastView.swift */,
 				32B63F3628A3EE3400811E02 /* RoastsView.swift */,
 				32B63F6028A8222D00811E02 /* RoastsViewModel.swift */,
+				32B63F6A28A96D7200811E02 /* TempView.swift */,
+				32B63F6C28A96D8100811E02 /* TempViewModel.swift */,
 			);
 			path = Roasts;
 			sourceTree = "<group>";
@@ -167,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				32B63F5428A7105300811E02 /* Date.swift */,
+				32B63F6E28A9833800811E02 /* Int.swift */,
+				32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -284,11 +296,14 @@
 				32B63F4E28A59A5D00811E02 /* EditProfileView.swift in Sources */,
 				32B63F4328A535F400811E02 /* ProfilesServiceImpl.swift in Sources */,
 				32B63F3928A3EE8500811E02 /* SettingsView.swift in Sources */,
+				32B63F6F28A9833800811E02 /* Int.swift in Sources */,
 				32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */,
 				32B63F5928A7D98100811E02 /* Temp.swift in Sources */,
 				32B63F3528A3EE1A00811E02 /* MainView.swift in Sources */,
 				32B63F3F28A532BF00811E02 /* Profile.swift in Sources */,
+				32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */,
 				32B63F5D28A7DFD000811E02 /* RoastsServiceImpl.swift in Sources */,
+				32B63F6D28A96D8100811E02 /* TempViewModel.swift in Sources */,
 				32B63F5528A7105300811E02 /* Date.swift in Sources */,
 				32B63F4528A5373300811E02 /* CoreDataService.swift in Sources */,
 				32B63F5F28A821EC00811E02 /* RoastCellView.swift in Sources */,
@@ -305,6 +320,7 @@
 				32B63F5028A59BA200811E02 /* EditProfileViewModel.swift in Sources */,
 				32B63F5728A7D81F00811E02 /* Roast.swift in Sources */,
 				32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */,
+				32B63F6B28A96D7200811E02 /* TempView.swift in Sources */,
 				32B63F4828A5387600811E02 /* roaster.xcdatamodeld in Sources */,
 				32B63F5B28A7DF7B00811E02 /* RoastsService.swift in Sources */,
 			);

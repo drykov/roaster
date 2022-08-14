@@ -29,6 +29,9 @@ class CreateRoastViewModel: ObservableObject {
     @Published var startTemperature: Int = 0
     @Published var roastTime: Int = 0
     @Published var startWeight: Int = 0
+    @Published var finish = false
+    
+    private(set) var roast: Roast?
 
     init(profilesService: ProfilesService = ProfilesServiceImpl.shared, roastsService: RoastsService = RoastsServiceImpl.shared) {
         self.profilesService = profilesService
@@ -63,7 +66,8 @@ class CreateRoastViewModel: ObservableObject {
                     print("Can't create roast \(error)")
                 }
             }, receiveValue: { [weak self] in
-                //self?.finish.toggle()
+                self?.roast = roast
+                self?.finish.toggle()
             })
             .store(in: &cancellables)
     }

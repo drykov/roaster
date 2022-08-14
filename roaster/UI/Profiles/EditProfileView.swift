@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditProfileView: View {
     
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.dismiss) private var dismiss
     
     @Binding var viewModel: EditProfileViewModel
     
@@ -34,7 +34,7 @@ struct EditProfileView: View {
             }
         }
         .onReceive(viewModel.$finish) { _ in
-            presentationMode.wrappedValue.dismiss()
+            dismiss()
         }
         .navigationTitle(viewModel.create ? "Create profile" : "Edit profile")
     }
