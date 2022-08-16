@@ -35,6 +35,8 @@
 		32B63F6D28A96D8100811E02 /* TempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6C28A96D8100811E02 /* TempViewModel.swift */; };
 		32B63F6F28A9833800811E02 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6E28A9833800811E02 /* Int.swift */; };
 		32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */; };
+		32B63F7828AB001D00811E02 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 32B63F7728AB001D00811E02 /* Charts */; };
+		32B63F7A28AB006E00811E02 /* TempChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7928AB006E00811E02 /* TempChartView.swift */; };
 		32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC328A3E8D000A12933 /* roasterApp.swift */; };
 		32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC528A3E8D000A12933 /* ContentView.swift */; };
 		32CA3DC828A3E8D000A12933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA3DC728A3E8D000A12933 /* Assets.xcassets */; };
@@ -70,6 +72,7 @@
 		32B63F6C28A96D8100811E02 /* TempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewModel.swift; sourceTree = "<group>"; };
 		32B63F6E28A9833800811E02 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntDoubleBinding.swift; sourceTree = "<group>"; };
+		32B63F7928AB006E00811E02 /* TempChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartView.swift; sourceTree = "<group>"; };
 		32CA3DC028A3E8D000A12933 /* Roaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA3DC328A3E8D000A12933 /* roasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roasterApp.swift; sourceTree = "<group>"; };
 		32CA3DC528A3E8D000A12933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B63F7828AB001D00811E02 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,7 @@
 				32B63F6428A8226C00811E02 /* RoastView.swift */,
 				32B63F3628A3EE3400811E02 /* RoastsView.swift */,
 				32B63F6028A8222D00811E02 /* RoastsViewModel.swift */,
+				32B63F7928AB006E00811E02 /* TempChartView.swift */,
 				32B63F6A28A96D7200811E02 /* TempView.swift */,
 				32B63F6C28A96D8100811E02 /* TempViewModel.swift */,
 			);
@@ -183,11 +188,19 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		32B63F7628AB001D00811E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32CA3DB728A3E8D000A12933 = {
 			isa = PBXGroup;
 			children = (
 				32CA3DC228A3E8D000A12933 /* roaster */,
 				32CA3DC128A3E8D000A12933 /* Products */,
+				32B63F7628AB001D00811E02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +252,9 @@
 			dependencies = (
 			);
 			name = roaster;
+			packageProductDependencies = (
+				32B63F7728AB001D00811E02 /* Charts */,
+			);
 			productName = roaster;
 			productReference = 32CA3DC028A3E8D000A12933 /* Roaster.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 32CA3DB728A3E8D000A12933;
+			packageReferences = (
+				32B63F7328AAFFA100811E02 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 32CA3DC128A3E8D000A12933 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,6 +338,7 @@
 				32B63F5228A70F9E00811E02 /* ProfileCellView.swift in Sources */,
 				32B63F5028A59BA200811E02 /* EditProfileViewModel.swift in Sources */,
 				32B63F5728A7D81F00811E02 /* Roast.swift in Sources */,
+				32B63F7A28AB006E00811E02 /* TempChartView.swift in Sources */,
 				32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */,
 				32B63F6B28A96D7200811E02 /* TempView.swift in Sources */,
 				32B63F4828A5387600811E02 /* roaster.xcdatamodeld in Sources */,
@@ -523,6 +543,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32B63F7328AAFFA100811E02 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32B63F7728AB001D00811E02 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32B63F7328AAFFA100811E02 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		32B63F4628A5387600811E02 /* roaster.xcdatamodeld */ = {

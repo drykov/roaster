@@ -24,6 +24,7 @@ class TempViewModel: ObservableObject {
     @Published var temps: [Temp] = .init()
     @Published var firstCrackTime: Int?
     @Published var secondCrackTime: Int?
+    let developmentTime: Int
     @Published var endTime: Int?
     @Published var finish: Bool = false
 
@@ -31,9 +32,11 @@ class TempViewModel: ObservableObject {
         self.roastsService = roastsService
         self.roast = roast
         currentTemp = roast?.startTemperature ?? 0
+        developmentTime = Int(Double(roast?.roastTime ?? 0) * 0.8)
     }
 
     func startRoast() {
+        addTemp()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
             self?.currentTime += 1
         }

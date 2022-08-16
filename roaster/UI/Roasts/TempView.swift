@@ -10,51 +10,46 @@ import SwiftUI
 struct TempView: View {
     
     @StateObject var viewModel: TempViewModel
-
+    
     @Environment(\.dismiss) private var dismiss
-
+    
     var body: some View {
         VStack {
-            ScrollView {
-                HStack {
-                    Text(viewModel.currentTime.formatTime() ?? "--:--")
-                        .frame(maxWidth: .infinity)
-                    Button {
-                        if viewModel.started {
-                            viewModel.setEndTime()
-                        } else {
-                            viewModel.startRoast()
-                        }
-                    } label: {
-                        Image(systemName: viewModel.started ? "stop.fill" : "play.fill")
-                    }
+            HStack {
+                Text(viewModel.currentTime.formatTime() ?? "--:--")
                     .frame(maxWidth: .infinity)
-                }
-                .padding()
-                HStack {
-                    Button {
-                        viewModel.setFirstCrackTime()
-                    } label: {
-                        Text("First crack")
+                Button {
+                    if viewModel.started {
+                        viewModel.setEndTime()
+                    } else {
+                        viewModel.startRoast()
                     }
-                    .frame(maxWidth: .infinity)
-                    Button {
-                        viewModel.setSecondCrack()
-                    } label: {
-                        Text("Second crack")
-                    }
-                    .frame(maxWidth: .infinity)
+                } label: {
+                    Image(systemName: viewModel.started ? "stop.fill" : "play.fill")
                 }
-                .padding()
-                
-                Text(viewModel.firstCrackTime?.formatTime() ?? "--:--")
-                Text(viewModel.secondCrackTime?.formatTime() ?? "--:--")
-                Text(viewModel.endTime?.formatTime() ?? "--:--")
-                ForEach(viewModel.temps, id: \.self) { temp in
-                    Text("\(temp.time.formatTime() ?? "--:--"), \(temp.temp)")
-                }
+                .frame(maxWidth: .infinity)
             }
-            Spacer()
+            .padding()
+            HStack {
+                Button {
+                    viewModel.setFirstCrackTime()
+                } label: {
+                    Text("First crack \(viewModel.firstCrackTime?.formatTime() ?? "")")
+                }
+                .frame(maxWidth: .infinity)
+                Button {
+                    viewModel.setSecondCrack()
+                } label: {
+                    Text("Second crack \(viewModel.secondCrackTime?.formatTime() ?? "")")
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .padding()
+            TempChartView(temps: viewModel.temps,
+                          firstCrackTime: viewModel.firstCrackTime,
+                          secondCrackTime: viewModel.secondCrackTime,
+                          developmentTime: viewModel.developmentTime)
+            .padding()
             VStack {
                 HStack(spacing: 16) {
                     Button {
@@ -75,6 +70,7 @@ struct TempView: View {
                 } label: {
                     Text("Set \(viewModel.currentTemp)°C")
                 }
+                .padding()
             }
             .padding()
         }
@@ -84,10 +80,13 @@ struct TempView: View {
     }
 }
 
+
 struct TempView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TempView(viewModel: TempViewModel(roast: Roast(id: nil, created: nil, name: "", startTemperature: 200, roastTime: 600, startWeight: 200,
-                                                       temps: [], firstCrackTime: nil, secondCrackTime: nil, endTime: nil, endWeight: nil)))
+        TempView(viewModel: TempViewModel(roast: Roast(id: nil, created: nil, name: "",
+                                                       startTemperature: 200, roastTime: 600, startWeight: 200,
+                                                       temps: [], firstCrackTime: nil, secondCrackTime: nil,
+                                                       endTime: nil, endWeight: nil)))
     }
 }
