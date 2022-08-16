@@ -16,4 +16,8 @@ extension Int {
         formatter.zeroFormattingBehavior = [.pad, .pad]
         return formatter.string(from: TimeInterval(self))
     }
+    
+    var stringValue: String {
+        "\(self)"
+    }
 }

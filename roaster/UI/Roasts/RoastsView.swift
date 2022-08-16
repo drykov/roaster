@@ -13,30 +13,41 @@ struct RoastsView: View {
     
     @State var reload = false
     
+    @State private var showRoast = false
+    @State private var roast: Roast?
+    
     var body: some View {
         NavigationView {
-            List(viewModel.roasts) { roast in
-                RoastCellView(roast: roast)
-                    .swipeActions(allowsFullSwipe: false) {
-                        Button(role: .destructive) {
-                            viewModel.deleteRoast(roast)
-                        } label: {
-                            Image(systemName: "trash")
+            VStack {
+                List(viewModel.roasts) { roast in
+                    RoastCellView(roast: roast)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            self.roast = roast
+                            showRoast.toggle()
                         }
-                    }
-            }
-            .refreshable {
-                viewModel.getRoasts()
-            }
-            .onChange(of: reload) { _ in
-                viewModel.getRoasts()
-            }
-            .toolbar {
-                NavigationLink(destination: { CreateRoastView(reload: $reload) }) {
-                    Image(systemName: "plus")
+                        .swipeActions(allowsFullSwipe: false) {
+                            Button(role: .destructive) {
+                                viewModel.deleteRoast(roast)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                        }
                 }
+                .refreshable {
+                    viewModel.getRoasts()
+                }
+                .onChange(of: reload) { _ in
+                    viewModel.getRoasts()
+                }
+                .toolbar {
+                    NavigationLink(destination: { CreateRoastView(reload: $reload) }) {
+                        Image(systemName: "plus")
+                    }
+                }
+                .navigationBarTitle("Roasts")
+                NavigationLink(destination: RoastView(roast: $roast), isActive: $showRoast) { EmptyView() }
             }
-            .navigationBarTitle("Roasts")
         }
     }
 }

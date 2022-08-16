@@ -43,7 +43,6 @@ class CreateRoastViewModel: ObservableObject {
     @Published var firstCrackTime: Int?
     @Published var secondCrackTime: Int?
     @Published var developmentTime: Int?
-    @Published var endTime: Int?
     
     init(profilesService: ProfilesService = ProfilesServiceImpl.shared, roastsService: RoastsService = RoastsServiceImpl.shared) {
         self.profilesService = profilesService
@@ -97,11 +96,10 @@ class CreateRoastViewModel: ObservableObject {
     
     func setEndTime() {
         timer?.invalidate()
-        endTime = currentTime
         started = false
         
         let roast = Roast(id: nil, created: nil, name: name, startTemperature: startTemperature, roastTime: roastTime, startWeight: startWeight,
-                          temps: temps, firstCrackTime: firstCrackTime, secondCrackTime: secondCrackTime, endTime: endTime, endWeight: nil)
+                          temps: temps, firstCrackTime: firstCrackTime, secondCrackTime: secondCrackTime, endTime: currentTime, endWeight: nil)
         roastsService.createRoast(roast)
             .sink(receiveCompletion: { completion in
                 if case let .failure(error) = completion {

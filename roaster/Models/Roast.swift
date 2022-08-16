@@ -20,6 +20,6 @@ struct Roast: Identifiable {
     let temps: [Temp]
     let firstCrackTime: Int?
     let secondCrackTime: Int?
-    let endTime: Int?
+    let endTime: Int
     let endWeight: Int?
 }

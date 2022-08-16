@@ -29,6 +29,6 @@ struct RoastCellView: View {
 struct RoastCellView_Previews: PreviewProvider {
     
     static var previews: some View {
-        RoastCellView(roast: Roast(id: nil, created: nil, name: "", startTemperature: 0, roastTime: 0, startWeight: 0, temps: [], firstCrackTime: nil, secondCrackTime: nil, endTime: nil, endWeight: nil))
+        RoastCellView(roast: Roast(id: nil, created: nil, name: "", startTemperature: 0, roastTime: 0, startWeight: 0, temps: [], firstCrackTime: nil, secondCrackTime: nil, endTime: 0, endWeight: nil))
     }
 }
