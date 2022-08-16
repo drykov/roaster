@@ -13,8 +13,8 @@ struct TempChartView: UIViewRepresentable {
     let temps: [Temp]
     let firstCrackTime: Int?
     let secondCrackTime: Int?
-    let developmentTime: Int
-
+    let developmentTime: Int?
+    
     func makeUIView(context: Context) -> LineChartView {
         LineChartView()
     }

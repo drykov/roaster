@@ -11,9 +11,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView() {
-            //MainView()
-            TempView(viewModel: TempViewModel(roast: Roast(id: nil, created: nil, name: "", startTemperature: 200, roastTime: 600, startWeight: 200,
-                                                           temps: [], firstCrackTime: nil, secondCrackTime: nil, endTime: nil, endWeight: nil)))
+            MainView()
                 .tabItem {
                     Label("Main", systemImage: "play")
                 }

@@ -9,9 +9,7 @@ import SwiftUI
 
 struct TempView: View {
     
-    @StateObject var viewModel: TempViewModel
-    
-    @Environment(\.dismiss) private var dismiss
+    @ObservedObject var viewModel: CreateRoastViewModel
     
     var body: some View {
         VStack {
@@ -22,7 +20,7 @@ struct TempView: View {
                     if viewModel.started {
                         viewModel.setEndTime()
                     } else {
-                        viewModel.startRoast()
+                        viewModel.startTimer()
                     }
                 } label: {
                     Image(systemName: viewModel.started ? "stop.fill" : "play.fill")
@@ -74,9 +72,7 @@ struct TempView: View {
             }
             .padding()
         }
-        .onReceive(viewModel.$finish) { _ in
-            dismiss()
-        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -84,9 +80,6 @@ struct TempView: View {
 struct TempView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TempView(viewModel: TempViewModel(roast: Roast(id: nil, created: nil, name: "",
-                                                       startTemperature: 200, roastTime: 600, startWeight: 200,
-                                                       temps: [], firstCrackTime: nil, secondCrackTime: nil,
-                                                       endTime: nil, endWeight: nil)))
+        TempView(viewModel: CreateRoastViewModel())
     }
 }

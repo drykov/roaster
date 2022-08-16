@@ -32,7 +32,6 @@
 		32B63F6528A8226C00811E02 /* RoastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6428A8226C00811E02 /* RoastView.swift */; };
 		32B63F6728A8228C00811E02 /* CreateRoastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */; };
 		32B63F6B28A96D7200811E02 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6A28A96D7200811E02 /* TempView.swift */; };
-		32B63F6D28A96D8100811E02 /* TempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6C28A96D8100811E02 /* TempViewModel.swift */; };
 		32B63F6F28A9833800811E02 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F6E28A9833800811E02 /* Int.swift */; };
 		32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */; };
 		32B63F7828AB001D00811E02 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 32B63F7728AB001D00811E02 /* Charts */; };
@@ -69,7 +68,6 @@
 		32B63F6428A8226C00811E02 /* RoastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastView.swift; sourceTree = "<group>"; };
 		32B63F6628A8228C00811E02 /* CreateRoastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoastViewModel.swift; sourceTree = "<group>"; };
 		32B63F6A28A96D7200811E02 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
-		32B63F6C28A96D8100811E02 /* TempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewModel.swift; sourceTree = "<group>"; };
 		32B63F6E28A9833800811E02 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntDoubleBinding.swift; sourceTree = "<group>"; };
 		32B63F7928AB006E00811E02 /* TempChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartView.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				32B63F6028A8222D00811E02 /* RoastsViewModel.swift */,
 				32B63F7928AB006E00811E02 /* TempChartView.swift */,
 				32B63F6A28A96D7200811E02 /* TempView.swift */,
-				32B63F6C28A96D8100811E02 /* TempViewModel.swift */,
 			);
 			path = Roasts;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 				32B63F3F28A532BF00811E02 /* Profile.swift in Sources */,
 				32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */,
 				32B63F5D28A7DFD000811E02 /* RoastsServiceImpl.swift in Sources */,
-				32B63F6D28A96D8100811E02 /* TempViewModel.swift in Sources */,
 				32B63F5528A7105300811E02 /* Date.swift in Sources */,
 				32B63F4528A5373300811E02 /* CoreDataService.swift in Sources */,
 				32B63F5F28A821EC00811E02 /* RoastCellView.swift in Sources */,
