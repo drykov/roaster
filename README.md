@@ -1,7 +1,7 @@
 # Roaster companion
 Helps roast coffee at home
 
-## Architecture details:
+## Architecture details
 * Network - none
 * Database - Core Data
 * Reactive - Combine
