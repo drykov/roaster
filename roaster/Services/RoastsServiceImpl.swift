@@ -27,7 +27,6 @@ class RoastsServiceImpl: RoastsService {
                 request.sortDescriptors = [NSSortDescriptor(key: "created", ascending: false)]
                 let items = try self.coreDataService.context.fetch(request)
                 promise(.success(items.map { item in
-                    print(item.endWeight)
                     var temps = [Temp]()
                     if let temps_time = item.temps_time, let temps_temp = item.temps_temp {
                         for i in 0..<temps_time.count {

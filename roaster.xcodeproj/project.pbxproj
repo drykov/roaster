@@ -36,6 +36,11 @@
 		32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */; };
 		32B63F7828AB001D00811E02 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 32B63F7728AB001D00811E02 /* Charts */; };
 		32B63F7A28AB006E00811E02 /* TempChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7928AB006E00811E02 /* TempChartView.swift */; };
+		32B63F7E28AD170300811E02 /* WeightLossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7D28AD170300811E02 /* WeightLossView.swift */; };
+		32B63F8028AD171300811E02 /* ExtractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F7F28AD171300811E02 /* ExtractionView.swift */; };
+		32B63F8228AD188500811E02 /* WeightLossViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F8128AD188500811E02 /* WeightLossViewModel.swift */; };
+		32B63F8428AD189900811E02 /* ExtractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F8328AD189900811E02 /* ExtractionViewModel.swift */; };
+		32B63F8628AD1BF300811E02 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63F8528AD1BF300811E02 /* Double.swift */; };
 		32CA3DC428A3E8D000A12933 /* roasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC328A3E8D000A12933 /* roasterApp.swift */; };
 		32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA3DC528A3E8D000A12933 /* ContentView.swift */; };
 		32CA3DC828A3E8D000A12933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA3DC728A3E8D000A12933 /* Assets.xcassets */; };
@@ -71,6 +76,11 @@
 		32B63F6E28A9833800811E02 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntDoubleBinding.swift; sourceTree = "<group>"; };
 		32B63F7928AB006E00811E02 /* TempChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartView.swift; sourceTree = "<group>"; };
+		32B63F7D28AD170300811E02 /* WeightLossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLossView.swift; sourceTree = "<group>"; };
+		32B63F7F28AD171300811E02 /* ExtractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractionView.swift; sourceTree = "<group>"; };
+		32B63F8128AD188500811E02 /* WeightLossViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLossViewModel.swift; sourceTree = "<group>"; };
+		32B63F8328AD189900811E02 /* ExtractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractionViewModel.swift; sourceTree = "<group>"; };
+		32B63F8528AD1BF300811E02 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		32CA3DC028A3E8D000A12933 /* Roaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA3DC328A3E8D000A12933 /* roasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roasterApp.swift; sourceTree = "<group>"; };
 		32CA3DC528A3E8D000A12933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,7 +143,11 @@
 		32B63F3228A3EDCC00811E02 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				32B63F7F28AD171300811E02 /* ExtractionView.swift */,
+				32B63F8328AD189900811E02 /* ExtractionViewModel.swift */,
 				32B63F3828A3EE8500811E02 /* SettingsView.swift */,
+				32B63F7D28AD170300811E02 /* WeightLossView.swift */,
+				32B63F8128AD188500811E02 /* WeightLossViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 				32B63F5428A7105300811E02 /* Date.swift */,
 				32B63F6E28A9833800811E02 /* Int.swift */,
 				32B63F7128A99B4F00811E02 /* IntDoubleBinding.swift */,
+				32B63F8528AD1BF300811E02 /* Double.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -310,8 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B63F4E28A59A5D00811E02 /* EditProfileView.swift in Sources */,
+				32B63F8428AD189900811E02 /* ExtractionViewModel.swift in Sources */,
 				32B63F4328A535F400811E02 /* ProfilesServiceImpl.swift in Sources */,
 				32B63F3928A3EE8500811E02 /* SettingsView.swift in Sources */,
+				32B63F8228AD188500811E02 /* WeightLossViewModel.swift in Sources */,
 				32B63F6F28A9833800811E02 /* Int.swift in Sources */,
 				32CA3DC628A3E8D000A12933 /* ContentView.swift in Sources */,
 				32B63F5928A7D98100811E02 /* Temp.swift in Sources */,
@@ -320,8 +337,11 @@
 				32B63F7228A99B4F00811E02 /* IntDoubleBinding.swift in Sources */,
 				32B63F5D28A7DFD000811E02 /* RoastsServiceImpl.swift in Sources */,
 				32B63F5528A7105300811E02 /* Date.swift in Sources */,
+				32B63F8628AD1BF300811E02 /* Double.swift in Sources */,
+				32B63F8028AD171300811E02 /* ExtractionView.swift in Sources */,
 				32B63F4528A5373300811E02 /* CoreDataService.swift in Sources */,
 				32B63F5F28A821EC00811E02 /* RoastCellView.swift in Sources */,
+				32B63F7E28AD170300811E02 /* WeightLossView.swift in Sources */,
 				32B63F3728A3EE3400811E02 /* RoastsView.swift in Sources */,
 				32B63F6128A8222D00811E02 /* RoastsViewModel.swift in Sources */,
 				32B63F4A28A5394500811E02 /* CoreDataServiceImpl.swift in Sources */,

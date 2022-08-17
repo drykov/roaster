@@ -16,10 +16,10 @@ struct SettingsView: View {
                     Text("Profiles")
                 }
                 Section {
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: WeightLossView()) {
                         Text("Weight loss calculator")
                     }
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: ExtractionView()) {
                         Text("Extraction calculator")
                     }
                 }
