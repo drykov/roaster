@@ -12,17 +12,12 @@ struct ProfileCellView: View {
     let profile: Profile
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(profile.name)
-                Text(profile.created?.formatFull() ?? "-")
-                    .foregroundColor(.gray)
-            }
-            .padding()
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(Color(.tertiaryLabel))
+        VStack(alignment: .leading) {
+            Text(profile.name)
+            Text(profile.created?.formatFull() ?? "-")
+                .foregroundColor(.gray)
         }
+        .padding()
     }
 }
 

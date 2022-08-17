@@ -16,19 +16,21 @@ struct ProfilesView: View {
     
     var body: some View {
         List(viewModel.profiles) { profile in
-            ProfileCellView(profile: profile)
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    editViewModel = EditProfileViewModel(profile: profile)
-                    editProfile.toggle()
+            NavigationLink(destination: EditProfileView(viewModel: $editViewModel), isActive: $editProfile) {
+                ProfileCellView(profile: profile)
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                editViewModel = EditProfileViewModel(profile: profile)
+                editProfile.toggle()
+            }
+            .swipeActions(allowsFullSwipe: false) {
+                Button(role: .destructive) {
+                    viewModel.deleteProfile(profile)
+                } label: {
+                    Image(systemName: "trash")
                 }
-                .swipeActions(allowsFullSwipe: false) {
-                    Button(role: .destructive) {
-                        viewModel.deleteProfile(profile)
-                    } label: {
-                        Image(systemName: "trash")
-                    }
-                }
+            }
         }
         .refreshable {
             viewModel.getProfiles()
@@ -45,7 +47,6 @@ struct ProfilesView: View {
             }
         }
         .navigationBarTitle("Profiles")
-        NavigationLink(destination: EditProfileView(viewModel: $editViewModel), isActive: $editProfile) { EmptyView() }
     }
 }
 
