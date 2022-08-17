@@ -18,36 +18,35 @@ struct RoastsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List(viewModel.roasts) { roast in
+            List(viewModel.roasts) { roast in
+                NavigationLink(destination: RoastView(roast: $roast), isActive: $showRoast) {
                     RoastCellView(roast: roast)
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            self.roast = roast
-                            showRoast.toggle()
-                        }
-                        .swipeActions(allowsFullSwipe: false) {
-                            Button(role: .destructive) {
-                                viewModel.deleteRoast(roast)
-                            } label: {
-                                Image(systemName: "trash")
-                            }
-                        }
                 }
-                .refreshable {
-                    viewModel.getRoasts()
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    self.roast = roast
+                    showRoast.toggle()
                 }
-                .onChange(of: reload) { _ in
-                    viewModel.getRoasts()
-                }
-                .toolbar {
-                    NavigationLink(destination: { CreateRoastView(reload: $reload) }) {
-                        Image(systemName: "plus")
+                .swipeActions(allowsFullSwipe: false) {
+                    Button(role: .destructive) {
+                        viewModel.deleteRoast(roast)
+                    } label: {
+                        Image(systemName: "trash")
                     }
                 }
-                .navigationBarTitle("Roasts")
-                NavigationLink(destination: RoastView(roast: $roast), isActive: $showRoast) { EmptyView() }
             }
+            .refreshable {
+                viewModel.getRoasts()
+            }
+            .onChange(of: reload) { _ in
+                viewModel.getRoasts()
+            }
+            .toolbar {
+                NavigationLink(destination: { CreateRoastView(reload: $reload) }) {
+                    Image(systemName: "plus")
+                }
+            }
+            .navigationBarTitle("Roasts")
         }
     }
 }

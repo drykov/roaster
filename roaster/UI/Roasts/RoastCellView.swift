@@ -8,21 +8,16 @@
 import SwiftUI
 
 struct RoastCellView: View {
-
+    
     let roast: Roast
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(roast.name)
-                Text(roast.created?.formatFull() ?? "-")
-                    .foregroundColor(.gray)
-            }
-            .padding()
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(Color(.tertiaryLabel))
+        VStack(alignment: .leading) {
+            Text(roast.name)
+            Text(roast.created?.formatFull() ?? "-")
+                .foregroundColor(.gray)
         }
+        .padding()
     }
 }
 
